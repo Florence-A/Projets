@@ -1,0 +1,45 @@
+
+____________ TO DO _______________
+
+FAIRE UN BANDEAU EN HAUT POUR NAV ET DECO ADMIN ET CLIENT
+
+
+
+
+
+
+1 page CRUD user :
+- tableau CRUD user
+  .icône modif
+  .icône delete
+  .formulaire d'ajout
+  (.bouton switch vers produits)
+  (.bouton déco > direction page déco)
+> page php de modif ??
+> page php de suppression ??
+> page php ajout
+
+
+
+
+
+1 page accueil :
+
+- bienvenue !
+- inscription (formulaire1)
+  . refusée si mail existe déjà (index)
+- connexion (formulaire2)
+  . v. admin
+  . v. autre
+> page php de connexion (signin) + $_session (redirection CRUD produits admin ou page achat ?? ou meme page ??)
+> page php de insert (signup) + message retour pour signin
+
+
+
+
+
+1 page CRUD produit :
+(accès v.admin)
+- tableau CRUD produits
+  . bouton déconnexion
+> page php de déco

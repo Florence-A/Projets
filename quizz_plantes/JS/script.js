@@ -1,7 +1,3 @@
-// On définit les questions et leur réponses dans des objets, eux mêmes rangés dans un tableau. Ici ce ne sont que des déclarations
-// de variables, rien n'est encore affiché nulle part. On construit les questions en leur assignant un id et des options de réponses
-// lesquelles sont des objets contenant un texte (la proposition) et une valeur isCorrect (si elles sont vraies ou fausses).
-
 const questions = [
     {
         id: 0 ,
@@ -31,7 +27,7 @@ var timOp1 = ["../images/cigue.jpg","../images/colchiqueDA.jpg"];
 var timOp2 = ["../images/plantain.jpg","../images/fougere.jpg"];
 var timOp3 = ["../images/belladone.jpg","../images/arum.png"];
 var timOp4 = ["../images/muguet.jpg","../images/ailOurs.jpg"];
-  //PERSO Rajout d'images
+
 var imOp1 = document.getElementById("imOp1");
 var imOp2 = document.getElementById("imOp2");
 var imOp3 = document.getElementById("imOp3");
@@ -39,15 +35,14 @@ var imOp4 = document.getElementById("imOp4");
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Une fois les questions réponses déclarées, on va déclarer une variable qui servira à lancer le quizz
+
 
 var start = true;
 
-// Puis on construit une fonction
 
 function iterate(id) {
 
-    //On récupère le matos depuis le doc HTML (??)
+    
     var result = document.getElementsByClassName("result");
     result[0].innerText="";
     var comment = document.getElementsByClassName("comment");
@@ -63,23 +58,23 @@ function iterate(id) {
 
     
 
-    //On définit le texte de la question
+    // AFFICHAGE
     question.innerText = questions[id].q;
 
-    //On définit le texte des options en fonction de la valeur text renseignée dans les objets a (answer)
+
     op1.innerText = questions[id].a[0].text;
     op2.innerText = questions[id].a[1].text;
     op3.innerText = questions[id].a[2].text;
     op4.innerText = questions[id].a[3].text;
 
-    //On définit les valeurs des objets "options" en fonction de la valeur isCorrect de l'objet a (answer)
+
     op1.value = questions[id].a[0].isCorrect;
     op2.value = questions[id].a[1].isCorrect;
     op3.value = questions[id].a[2].isCorrect;
     op4.value = questions[id].a[3].isCorrect;
 
 
-    // On déclare une var selected vide qui se remplira au clic sur un des boutons options en même temps qu'il fera changer le bouton de couleur
+    // BOUTON SELECTIONNE
 
     var selected = "";
 
@@ -112,17 +107,15 @@ function iterate(id) {
         selected = op4.value;
     })
 
-    // On récupère le bouton "validation" dans la variable
 
     const validation = document.getElementsByClassName("validation");
 
-    // On définit ce qui va s'afficher dans result la div au dessus de la question (c'est là qu'on peut ajouter un score)
+    // RESULTAT
 
     validation[0].addEventListener("click",()=>{
         if (selected=="true"){
             result[0].innerHTML="Bravo !"
             result[0].style.color="green";
-            comment[0].innerHTML= "C'est Mamie qui va être contente."
             
         } else {
             result[0].innerHTML="<small>Mamie risque de ne pas s'en remettre...</small>"
@@ -131,9 +124,9 @@ function iterate(id) {
     })
     
 
-} // La fonction iterate se termine ici
+} 
 
-// On définit une fonction slider pour jouer sur l'attribut source des images en fonction de l'id
+// SLIDER
 function slider(id) {
     imOp1.setAttribute("src",timOp1[id]);
     imOp2.setAttribute("src",timOp2[id]); 
@@ -141,18 +134,17 @@ function slider(id) {
     imOp4.setAttribute("src",timOp4[id]); 
 }
 
-// On lance le quizz grâce à notre variable start et notre fonction iterate ac l'argument 0
+// DEMARREUR
 if(start) {
     iterate(0)
 }
 
-// On récupère le bouton suivant
 
 const suivant=document.getElementsByClassName("suivant")[0];
 var id=0;
 
 
-// Au clic sur suivant, on demande d'annuler le start et de passer à la question suivante tant que l'id est inf à 2 (sil y a trois questions) ou 1 si deux
+// SUIVANT
 suivant.addEventListener("click",()=>{
     start=false;
     if(id<2){

@@ -4,6 +4,7 @@ body{
     width:100vw;
     height: 100vh;
     background-image: url(../images/fond.jpg);
+    background-position: center;
 }
 .panel{
     
