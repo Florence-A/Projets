@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
+
+body {
+    color : white ;
+    margin : auto ;
+    background-color: #12364E ;
+    height : 100vh ;
+    display : flex ;
+    justify-content: center;
+}
+
+.page_container {
+    margin : auto ;
+    text-align: center;
+}
+
+.arrow {
+    height : 50px ;
+    width : 50px ;
+    border : solid white 2px ;
+    border-radius: 100px;
+    font-size: 40px ;
+    text-align: center ;
+    margin : 0px ;
+    position : absolute ;
+    cursor: pointer;
+}
+.arrow:active {
+    background-color: white ;
+    transition-duration: 30ms;
+}
+.arrow:hover {
+    color : rgb(255, 174, 0);
+    border : rgb(255, 174, 0) solid 2px ;
+    transition-duration: 100ms;
+}
+
+.right {
+    right : -70px ;
+}
+.left {
+    left : -70px ;
+}
+
+.box {
+    width : 750px ;
+    height : 450px ;
+    border : solid white 2px ;
+    margin : auto ;
+    display : flex ;
+    flex-direction: column;
+    justify-content: space-around;
+    position : relative;
+    padding-bottom : 20px;
+    padding:20px;
+}
+
+.text {
+    font-size: 30px ;
+    font-family:"Gentium Plus";
+}
+
+.main_image img {
+    border : solid white 2px ;
+    max-width : 480px;
+    max-height : 300px;
+}
+
