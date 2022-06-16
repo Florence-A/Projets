@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-    $(document).click(function(){ party.confetti(); })
 
     var arrayText = 
     [
@@ -38,21 +37,29 @@ $(document).ready(function(){
         "../images/kuzco_complices.gif"
     ];
 
-    
+    var i = 0;
 
     $(".right").click(function() { 
-        if (i<(arrayText.length-1)){
+        if (i<(arrayText.length)){
             i++;
+        }
+        if (i<(arrayText.length)){
             $(".text").text(arrayText[i]);
             $("#gif").attr("src", arrayImages[i]);    
         }
-        else {
+        if (i >= arrayText.length) {
+            $(".popup").addClass("active");
+            $("#my-canvas").addClass("active");
             
-            //ajouter un truc qui pop ac des confettis
         }
+        
+    }); 
 
-    });    
-
+    // from Agezao on github
+    var confettiSettings = { target: 'my-canvas' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+    // end confetti-js
 
 
     $(".left").click(function() { 

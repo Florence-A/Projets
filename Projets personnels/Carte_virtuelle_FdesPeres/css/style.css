@@ -67,3 +67,45 @@ body {
     max-height : 300px;
 }
 
+
+
+.popup {
+    position : fixed;
+    visibility : hidden ;
+    font-family: "Gentium Plus";
+    color : black;
+    top : 50% ;
+    left : 50% ; 
+    background-color: rgb(219, 177, 26) ;
+    transform : translate(-50%, -50%) ;
+    width :500px ;
+    height : 300px ;
+    display : flex ;
+    justify-content: center ;
+    align-items: center ; 
+    border-radius: 50px;
+    box-shadow : 0 0 0 1000px rgba(0,0,0,0.7);
+}
+.popup.active{
+    visibility : visible ;
+}
+#my-canvas.active{
+    visibility : visible ;
+}
+
+#my-canvas {
+    position : fixed ;
+    top : 0 ;
+    left : 0 ;
+    visibility : hidden ;
+    z-index : 9999
+}
+
+.popup p {
+    font-size : 35px;
+}
+
+.popup img {
+    max-height : 200px;
+}
+
