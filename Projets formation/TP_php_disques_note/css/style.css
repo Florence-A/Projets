@@ -1,0 +1,17 @@
+body{
+    margin:auto;
+    text-align:center;
+    color:lightgray;
+    background-color: darkslategrey;
+}
+.container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+.case_album {
+    border : solid lightgray 1px;
+    padding : 10px;
+    width : 250px;
+}
