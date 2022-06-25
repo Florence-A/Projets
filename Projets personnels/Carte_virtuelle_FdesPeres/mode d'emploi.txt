@@ -1,0 +1,4 @@
+Coucou !
+
+Pour démarrer la carte, utiliser le fichier html "carte_virtuelle"
+qui se trouve dans le dossier html.

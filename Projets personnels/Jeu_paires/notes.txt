@@ -1,9 +1,0 @@
-Jeu des paires avec chronomètre
-
-1. squelette html-css
-2. chrono en JS
-3. images au placement aléatoire
-4. retournement des images et conditions
-5. conditions de réussite et arrêt du chrono
-6. récupération du score et du nom en BDD
-7. affichage du Top 10 (style arcade)
