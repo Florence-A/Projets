@@ -1,0 +1,61 @@
+body{
+    margin-top: 40px;
+    text-align:center;
+    background-image: url(../images/fond.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    color:cadetblue;
+}
+a{
+    color:aquamarine;
+}
+.container{
+    display:flex;
+    justify-content:space-around;
+    margin-top : 50px;
+}
+.article{
+    max-width: 225px;
+    border:solid 1px cadetblue;
+}
+table{
+    margin:auto;
+    margin-top : 70px;
+    border:solid 1px cadetblue;
+    border-collapse:collapse;
+}
+td{
+    border:solid 1px cadetblue;
+    padding:5px;
+    vertical-align:center;
+}
+.icone{
+    border:none;
+    width:25px;
+    height:25px;
+    color:transparent;
+}
+.modif{
+    background-image: url(../images/modif.jpg);
+    background-size: 25px;
+    cursor: pointer;
+}
+.delete{
+    background-image: url(../images/delete.jpg);
+    background-size: 25px;
+    cursor: pointer;
+}
+#ok{
+    background-image: url(../images/valide.jpg);
+    background-size: 25px;
+    cursor: pointer;
+}
+#bandeauDeco{
+    display:flex;
+    align-items: center;
+}
+#bandeauDeco a{
+    color:white;
+    padding : 10px;
+    background-color: black;
+}
