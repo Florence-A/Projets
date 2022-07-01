@@ -1,0 +1,23 @@
+PROJET OPEN CLASSROOM NODE-MONGO
+--------------------------------
+
+
+REPERTOIRE
+--------------------------------
+> app
+   > frontend
+      > node_modules
+   > backend
+      > 
+
+
+GLOSSAIRE
+--------------------------------
+Node     = runtime qui p d'écrire les tâches côté serveur
+Express  = framework de node facilitant la creation et gestion des serveurs
+
+
+NOTES AUTRES
+-------------------------------
+> npm run start
+dans le frontend, p de démarrer un serveur sur le port 4200
