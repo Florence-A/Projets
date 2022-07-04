@@ -1,0 +1,43 @@
+
+
+body {
+    width : 100vw;
+    height : 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100vw;
+    height : 100vh;
+    padding: 0;
+}
+
+.main {
+    background-image: url(../images/fond.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100vw;
+}
+
+.photo {
+    grid-area : 'a';
+}
+.linkedin {
+    grid-area : 'b';
+}
+.github {
+    grid-area : 'c';
+}
+.card- {
+    display : grid;
+    grid-template: 'a a'
+                   'b c';
+}
+
+
+
+.side-band {
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+}
