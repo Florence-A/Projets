@@ -8,16 +8,70 @@ REPERTOIRE
    > frontend
       > node_modules
    > backend
-      > 
+      > node_modules (express,nodemon)
+      > server.js (createServer())
+      > app.js
+      > models
+         > things.js
 
 
 GLOSSAIRE
 --------------------------------
-Node     = runtime qui p d'écrire les tâches côté serveur
-Express  = framework de node facilitant la creation et gestion des serveurs
+Node       = runtime qui p d'écrire les tâches côté serveur
+Express    = framework de node facilitant la creation et gestion des serveurs
+CommonJS   = système de module qui p d'importer les module avec require() sans specifier un
+	   - chemin exact de fichier (si pas de chemin indiqué, c'est un module de base)
+	   - require p d'omettre l'extension du fichier
+Middleware = fonctions qui capturent et traitent les requêtes envoyées vers le serveur
+	   - afin de contrôler comment va répondre notre serveur et passe l'exécution à
+	   - un prochain middleware (next ds les arguments)
+CORS	   = Cross Origin Resource Sharing, bloque les appels http entre deux serveurs 
+           - différents
+SQL        = Structured Query Language, bdd relationelle avec des tables organisée selon
+	   - des schémas stricts ac MySQL et PostgreSQL par ex != mongoDB
+MongoDB	   = P. des modifications en cours de route sur la bdd != Bdd relationnelle SQL
+	   - les données sont des collections de documents individuels en JSON
+JSON	   = Javascript Object Notation
 
 
 NOTES AUTRES
 -------------------------------
 > npm run start
 dans le frontend, p de démarrer un serveur sur le port 4200
+
+> npm init
+dans le back p de créer un package.json avec les options (point d'entrée server.js ici)
+seront enregistrés ici les détail de tous les packages npm qu'on installera
+
+> Il faut importer app dans le server.js, et le passer en argument de createServer
+car c'est une app qui recevra req et res et reagira en fct de la req.
+Il faut également indiquer le port pour app en plus de celui de server
+
+> next() p de renvoyer qqchose et ne pas faire freezer la page
+
+> app.use() p d'attribuer un middleware à une route spécifique de l'application
+le .use capte toutes les requêtes de tout types et à le dessus sur un app.post ou app.get
+
+Les form qui POST envoient du JSON, que l'on peut lier à req grâce à express et son
+module json
+
+Package Mongoose : p. de structurer les données dans mongoDB
+Ds backend/models/nomClasse.js
+> const classeSchema = mongoose.Schema p de définir le squelette de l'objet
+> mongoose.model('nomClasse',classeSchema) p de créer et exporter ce modèle
+
+> C.save() pour enregistrer l'instance de C ds la bdd
+> C.find() pour retrouver toutes les instances
+> C.findOne() pour retrouver une instance via son id par ex
+
+> app.put et app.delete attribuent des middlewares aux requetes de type modif et suppr
+> updateOne() et deleteOne() du modèle p de mettre à jour ou suppr les instances ds la bdd
+
+ERREURS FREQUENTES
+-------------------------------
+- les routes, oubli du / devant
+- module.exports = ...
+- ds les res.json({product}) les {}
+- ds les .then( bidule => res.... ) des () en trop
+- refermer une parenthèse après une route :p
+- ne pas checker la console pour les erreurs
