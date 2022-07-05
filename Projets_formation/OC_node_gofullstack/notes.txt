@@ -75,3 +75,4 @@ ERREURS FREQUENTES
 - ds les .then( bidule => res.... ) des () en trop
 - refermer une parenthèse après une route :p
 - ne pas checker la console pour les erreurs
+- pr passer sur une autre machine : npm start ds le frontend, et node server.js ds le back
